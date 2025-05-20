@@ -38,7 +38,7 @@ class Server {
             usuario: "/api/usuarios"
         };
         this.app = (0, express_1.default)();
-        this.port = process.env.PORT || "2200";
+        this.port = process.env.PORT || "8080";
         this.middleware();
         this.dbConnection();
         this.routes();
