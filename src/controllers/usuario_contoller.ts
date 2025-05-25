@@ -22,9 +22,7 @@ export const createUsuarios = async (req: Request, res: Response) => {
             contraseña,
         });
         console.log("se creo nuevo usuario", nuevoUsuario);
-        res.redirect("/index.html");
-
-
+        res.status(200).json({ nombre: nuevoUsuario.getDataValue('nombre')});
 
     } catch (error) {
         console.error(error);

@@ -35,7 +35,7 @@ const createUsuarios = (req, res) => __awaiter(void 0, void 0, void 0, function*
             contraseña,
         });
         console.log("se creo nuevo usuario", nuevoUsuario);
-        res.redirect("/index.html");
+        res.status(200).json({ nombre: nuevoUsuario.getDataValue('nombre') });
     }
     catch (error) {
         console.error(error);
