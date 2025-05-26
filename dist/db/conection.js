@@ -8,6 +8,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 let db;
 if (process.env.DATABASE_URL) {
+    console.log("🔌 Conectando a:", process.env.DATABASE_URL);
     // 🌐 Railway (producción)
     db = new sequelize_1.Sequelize(process.env.DATABASE_URL, {
         dialect: "postgres",

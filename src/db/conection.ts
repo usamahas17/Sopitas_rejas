@@ -6,6 +6,8 @@ dotenv.config();
 let db: Sequelize;
 
 if (process.env.DATABASE_URL) {
+    console.log("🔌 Conectando a:", process.env.DATABASE_URL);
+
   // 🌐 Railway (producción)
   db = new Sequelize(process.env.DATABASE_URL, {
     dialect: "postgres",
